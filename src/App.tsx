@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <div>ddd</div>
-     < Month/>  
+     < Month />  
     </div>
   );
 }

@@ -9,6 +9,8 @@ export class month {
     private month;
     private next = 1;
 
+    
+
     public getNextDate = (): Date | void => {
         const nextDate = new Date();
         nextDate.setFullYear(this.year);
@@ -17,6 +19,10 @@ export class month {
         if(nextDate.getMonth() === this.month){
             return nextDate;
         }
+    }
+
+    public static compare = (current,date)=>{
+
     }
 
     

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMemo } from 'react';
 import { month } from '../../core/month';
-import style from './index.module.less';
+import styles from './index.module.less';
 const getMonth = () => {
     let a;
     let _result = [];
@@ -22,10 +22,10 @@ export default () => {
 
     const dateData = useMemo(getMonth, []);
 
-    console.warn('[[', style)
-    return <div className='App-header'>
+    console.warn('[[', styles)
+    return <div className={styles.wrap}>
         {dateData.map((item,index)=>
-            <span key={index}>{item}</span>
+            <span key={index} className={styles.day} onClick={onCL}>{item}</span>
         )}
     </div>
 }
