@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import styles from './index.module.less';
 import Month from './components/Month';
 
-export default () => {
+interface calenderProps{
+  customCard?: React.ReactNode;
+}
 
+export default (props:calenderProps) => {
+
+  const {} = props;
   const [currentRange, setCurrentRange] = useState<(Date | undefined)[]>([undefined, undefined]);
   const [year, setYear] = useState(2022);
 
